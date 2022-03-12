@@ -12,8 +12,9 @@ HOME=os.environ.get("HOME")
 def check_for_updates():
     latest=requests.get('https://raw.githubusercontent.com/CalSch/CBS/master/version.txt')
     ver=float(latest.text)
+    # print(ver)
     if ver > version:
-        install=input("A new version of CBS is available, would you like to install it? (Y/n) ")
+        install=input(f"A new version of CBS is available (v{ver}, currently on v{version}), would you like to install it? (Y/n) ")
 
         if install != 'n':
             update()
