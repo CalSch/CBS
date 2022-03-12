@@ -4,6 +4,13 @@ import os
 import json
 import requests
 
+
+
+version=1
+
+# def check_for_updates():
+    # latest=requests.get()
+
 usage="""usage: cbs post|setup [TEXT]
 
 actions:
